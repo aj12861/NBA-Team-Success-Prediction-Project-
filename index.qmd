@@ -1,7 +1,7 @@
 ---
 title: "NBA Team Success Prediction"
 subtitle: "Using team statistics to predict overall win totals"
-author: "Aiden Johnson & Zane Gray"
+author: "Aiden Johnson and Zane Gray"
 date: last-modified
 description: "Replace with a brief description for link previews."
 ---
