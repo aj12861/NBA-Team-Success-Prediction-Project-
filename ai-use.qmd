@@ -1,28 +1,31 @@
 ---
 title: "AI Use and Verification"
 description: "A concise record of AI-supported work on this project."
-author: "Replace with all group members' names"
+author: "Aiden Johnson & Zane Gray"
 ---
 
 This page is a work log, not a second report. Short bullets are welcome. It is separate from the final case study and does not count toward the 750 to 1,000 word range.
 
 ## Starting point
 
-**AI system and date:** Replace.
+**ClaudeAI: 11/9/2026**
 
-**Before using AI for the required extension, briefly state your question, course-based core model, baseline result, and the specific limitation or opportunity you wanted to address.**
+**Our research question is: What best predicts a teams performance in a particular season? Our baseline model was built with seven predictors: Offensive/Defensive ratings, eFG percentage, Offensive turnover percentage, offensive/defensive rebound percentages, and pace. Our response variable was winning percentage. Our baseline result was that with the fitted model, the predictors accounted for around 93 to 95 percent of the data with and R^2 of around 0.952 and an adjusted R^2 of around 0.936. One main limitation with this core model is the fact that there could be some redundant predictors and we want to find whether or not each predictor is useful in our model.**
 
 ## Substantive prompts
 
 Paste the exact prompts that shaped the extension. Include the customized extension-selection prompt from the checkpoint and any important implementation follow-ups. Delete unused prompt blocks.
 
-> Replace with an exact prompt.
+> I am working on a project where I am trying to predict nba team success based on team statistics here is my research question, and some info about the analysis I have already done along with a rendered pdf of our project proposal. I would like your input on potential opportunities for change in the model we have already fit and extensions from it beyond the scope of a intermediate college level course on statistical modeling and multilinear regression. 
+> I am creating a regression case study in R and Quarto. My question is [question]. The response is [response and type], the main predictors are [predictors], and my course-based core model is [model]. My main result so far is [result]. I found this limitation or opportunity: [need]. Suggest three feasible extensions that keep the core analysis connected to regression methods taught in my class. One option may be a model not taught in class used as a comparator. For each, explain how it strengthens the same research question, how its result would enter the final case study, the implementation steps, and two ways I could verify it. Do not choose for me.
+> Our research question is: What best predicts a teams performance in a particular season? Our baseline model was built with seven predictors: Offensive/Defensive ratings, eFG percentage, Offensive turnover percentage, offensive/defensive rebound percentages, and pace. Our response variable was winning percentage. Our baseline result was that with the fitted model, the predictors accounted for around 93 to 95 percent of the data with and R^2 of around 0.952 and an adjusted R^2 of around 0.936. One main limitation with this core model is the fact that there could be some redundant predictors and we want to find whether or not each predictor is useful in our model.
 
 > Replace with another exact prompt, if needed.
 
 ## My decisions
 
 - **Accepted:** What useful advice did you use?
+We decided to accept the idea of using either a randdom forrest or a bayesian regression model with shrink priors based on the data that we have decided to use. We might also consider the use of ridge and lasso tests to analyze the current predictors we are using and their influence on the model.
 - **Changed:** What did you adapt to fit your data or goals?
 - **Rejected or corrected:** What advice was unsuitable, unnecessary, or wrong?
 
