@@ -25,7 +25,13 @@ Paste the exact prompts that shaped the extension. Include the customized extens
 ## My decisions
 
 - **Accepted:** What useful advice did you use?
-We decided to accept the idea of using either a randdom forrest or a bayesian regression model with shrink priors based on the data that we have decided to use. We might also consider the use of ridge and lasso tests to analyze the current predictors we are using and their influence on the model.
+We decided to accept the suggestion of using a bayesian regression model with shrink priors based on the data that we have decided to use. We might also consider the use of ridge and lasso tests to analyze the current predictors we are using and their influence on the model. 
+Verification: 
+Posterior predictive checks (pp_check) to see whether simulated win percentages resemble the observed distribution, plus loo() to compare the Bayesian models against each other on expected out-of-sample fit.
+A prior sensitivity analysis: rerun with a tighter and a wider prior and confirm the main conclusions (such as defensive rating’s effect) don’t change. With n = 30 the prior can matter, so you should report this either way.
+Repeat cv.glmnet with many different fold assignments (set seeds) and check whether the selected predictors and λ stay stable.
+Compare out-of-sample RMSE on identical folds against OLS and the Extension A model. If regularization doesn’t beat OLS predictively, say so honestly.
+
 - **Changed:** What did you adapt to fit your data or goals?
 - **Rejected or corrected:** What advice was unsuitable, unnecessary, or wrong?
 
