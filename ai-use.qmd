@@ -10,37 +10,30 @@ This page is a work log, not a second report. Short bullets are welcome. It is s
 
 **ClaudeAI: 11/9/2026**
 
-**Our research question is: What best predicts a teams performance in a particular season? Our baseline model was built with seven predictors: Offensive/Defensive ratings, eFG percentage, Offensive turnover percentage, offensive/defensive rebound percentages, and pace. Our response variable was winning percentage. Our baseline result was that with the fitted model, the predictors accounted for around 93 to 95 percent of the data with and R^2 of around 0.952 and an adjusted R^2 of around 0.936. One main limitation with this core model is the fact that there could be some redundant predictors and we want to find whether or not each predictor is useful in our model.**
+**Our research question is: What best predicts a teams performance in a particular season? Our baseline model was built with seven predictors: Offensive/Defensive ratings, eFG percentage, Offensive turnover percentage, offensive/defensive rebound percentages, and pace. Our response variable was winning percentage. Our baseline result was that with the fitted model, the predictors accounted for around 93 to 95 percent of the data with and R\^2 of around 0.952 and an adjusted R\^2 of around 0.936. One main limitation with this core model is the fact that there could be some redundant predictors and we want to find whether or not each predictor is useful in our model.**
 
 ## Substantive prompts
 
 Paste the exact prompts that shaped the extension. Include the customized extension-selection prompt from the checkpoint and any important implementation follow-ups. Delete unused prompt blocks.
 
-> I am working on a project where I am trying to predict nba team success based on team statistics here is my research question, and some info about the analysis I have already done along with a rendered pdf of our project proposal. I would like your input on potential opportunities for change in the model we have already fit and extensions from it beyond the scope of a intermediate college level course on statistical modeling and multilinear regression. 
-> I am creating a regression case study in R and Quarto. My question is [question]. The response is [response and type], the main predictors are [predictors], and my course-based core model is [model]. My main result so far is [result]. I found this limitation or opportunity: [need]. Suggest three feasible extensions that keep the core analysis connected to regression methods taught in my class. One option may be a model not taught in class used as a comparator. For each, explain how it strengthens the same research question, how its result would enter the final case study, the implementation steps, and two ways I could verify it. Do not choose for me.
-> Our research question is: What best predicts a teams performance in a particular season? Our baseline model was built with seven predictors: Offensive/Defensive ratings, eFG percentage, Offensive turnover percentage, offensive/defensive rebound percentages, and pace. Our response variable was winning percentage. Our baseline result was that with the fitted model, the predictors accounted for around 93 to 95 percent of the data with and R^2 of around 0.952 and an adjusted R^2 of around 0.936. One main limitation with this core model is the fact that there could be some redundant predictors and we want to find whether or not each predictor is useful in our model.
+> I am working on a project where I am trying to predict nba team success based on team statistics here is my research question, and some info about the analysis I have already done along with a rendered pdf of our project proposal. I would like your input on potential opportunities for change in the model we have already fit and extensions from it beyond the scope of a intermediate college level course on statistical modeling and multilinear regression. I am creating a regression case study in R and Quarto. My question is \[question\]. The response is \[response and type\], the main predictors are \[predictors\], and my course-based core model is \[model\]. My main result so far is \[result\]. I found this limitation or opportunity: \[need\]. Suggest three feasible extensions that keep the core analysis connected to regression methods taught in my class. One option may be a model not taught in class used as a comparator. For each, explain how it strengthens the same research question, how its result would enter the final case study, the implementation steps, and two ways I could verify it. Do not choose for me. Our research question is: What best predicts a teams performance in a particular season? Our baseline model was built with seven predictors: Offensive/Defensive ratings, eFG percentage, Offensive turnover percentage, offensive/defensive rebound percentages, and pace. Our response variable was winning percentage. Our baseline result was that with the fitted model, the predictors accounted for around 93 to 95 percent of the data with and R\^2 of around 0.952 and an adjusted R\^2 of around 0.936. One main limitation with this core model is the fact that there could be some redundant predictors and we want to find whether or not each predictor is useful in our model.
 
 > Replace with another exact prompt, if needed.
 
 ## My decisions
 
-- **Accepted:** What useful advice did you use?
-We decided to accept the suggestion of using a bayesian regression model with shrink priors based on the data that we have decided to use. We might also consider the use of ridge and lasso tests to analyze the current predictors we are using and their influence on the model. 
-Verification: 
-Posterior predictive checks (pp_check) to see whether simulated win percentages resemble the observed distribution, plus loo() to compare the Bayesian models against each other on expected out-of-sample fit.
-A prior sensitivity analysis: rerun with a tighter and a wider prior and confirm the main conclusions (such as defensive rating’s effect) don’t change. With n = 30 the prior can matter, so you should report this either way.
-Repeat cv.glmnet with many different fold assignments (set seeds) and check whether the selected predictors and λ stay stable.
-Compare out-of-sample RMSE on identical folds against OLS and the Extension A model. If regularization doesn’t beat OLS predictively, say so honestly.
+- **Accepted:** What useful advice did you use? We decided to accept the suggestion of using a bayesian regression model with shrink priors based on the data that we have decided to use. We might also consider the use of ridge and lasso tests to analyze the current predictors we are using and their influence on the model. Verification: Posterior predictive checks (pp_check) to see whether simulated win percentages resemble the observed distribution, plus loo() to compare the Bayesian models against each other on expected out-of-sample fit. A prior sensitivity analysis: rerun with a tighter and a wider prior and confirm the main conclusions (such as defensive rating’s effect) don’t change. With n = 30 the prior can matter, so you should report this either way. Repeat cv.glmnet with many different fold assignments (set seeds) and check whether the selected predictors and λ stay stable. Compare out-of-sample RMSE on identical folds against OLS and the Extension A model. If regularization doesn’t beat OLS predictively, say so honestly.
 
 - **Changed:** What did you adapt to fit your data or goals?
+
 - **Rejected or corrected:** What advice was unsuitable, unnecessary, or wrong?
 
 **Connection to the final case study:** Identify where the extension's method and result appear on the final page and how they strengthen the course-based analysis.
 
 ## Independent verification
 
-1. **Check and result:** Replace with an official source, diagnostic, simulation, manual calculation, comparison with a known method, or another suitable check.
-2. **Check and result:** Replace with a different check and what you learned.
+1.  **Check and result:** Replace with an official source, diagnostic, simulation, manual calculation, comparison with a known method, or another suitable check.
+2.  **Check and result:** Replace with a different check and what you learned.
 
 Link or cite verification sources where appropriate. A second AI response does not count as independent verification.
 

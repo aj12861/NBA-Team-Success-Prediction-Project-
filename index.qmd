@@ -16,6 +16,10 @@ This template suggests one way to tell the story. You may rename, combine, or re
 
 **In one or two short paragraphs, introduce the setting, audience, focused research question, data source, observational unit, response, important predictors, and one important data limitation. Lead with what makes the question worth answering.**
 
+The main goal of basketball is winning. There are many aspects of the game that determine which team wins, so we want to find which metrics best predict a team's winning percentage. As such, we will look to answer this research question: What best predicts a teams performance in a particular season? We will be addressing the general managers of the 30 NBA teams who would be particularly interested in finding the most effective ways to improve their teams and win more games. The response variable will be winning percentage with potential predictors: offensive efficiency, defensive efficiency, effective field goal percentage, pace, turnovers, and rebounding. One important data limitation is the effects of injury and shooting luck. Major injuries to key players are unpredictable and can drastically affect the predictors related to team performance. Shooting luck is also unpredictable and can confound success predictors.
+
+We pulled our data from basketball-reference.com where anyone can access public data about NBA teams and players when it comes to their performance and there are no privacy or ethical concerns when it comes to using their data. The observational unit is an individual NBA team during the 2025-26 regular season. All 30 teams are represented in the data set with individual observations. The response variable will be winning percentage. We will calculate it by dividing a teams wins with the sum of their wins and losses. We will do this calculation in R for each team and create a new variable in the data set. In the data, we find effective field goal percentage, pace, turnover percentage, offensive/defensive rating, and offensive/defensive rebound percentage. These predictors will be useful in providing evidence for our research question.
+
 ## What the baseline shows
 
 **Describe and justify a simple course-based baseline regression model. Interpret the result that best establishes the rest of the story, including its direction, magnitude, scale, and uncertainty. Explain one limitation or unresolved pattern that motivates deeper analysis.**
@@ -64,7 +68,7 @@ Details are in the [AI-use record](ai-use.qmd).
 
 ## Data and code
 
-- **Data:** Replace with a working source link or citation and any brief acquisition note needed to reproduce the project.
-- **Repository:** Replace with your repository URL.
+- **Data:** <https://www.basketball-reference.com/leagues/NBA_2026.html#all_advanced-team>
+- **Repository:** <https://aj12861.github.io/NBA-Team-Success-Prediction-Project-/>
 - [AI-use record](ai-use.qmd)
 - **Other sources:** Cite package documentation, articles, code, and other sources that materially informed the work.
